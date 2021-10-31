@@ -12,14 +12,14 @@ while True:
 while True:
     try:
         lnNum = int(input("Пожалуйста, введите количество натуральных логарифмов: "))
-        if lnNum != 0:
+        if lnNum > 0:
             break
     except:
         print("Вы допустили ошибку при вводе количества натуральных логарифмов")
 
 for i in range(lnNum):
     try:
-        x = log(x)
+        x = abs(log(x))
     except:
         print("Ой-ой, что-то пошло не так")
 print("S = ", x)
@@ -33,7 +33,8 @@ n_count = 0
 while True:
     try:
         n = int(input("Пожалуйста, введите количество элементов последовательности: "))
-        break
+        if n >= 0:
+            break
     except:
         print("Вы допустили ошибку при вводе целого числа")
 
@@ -65,9 +66,3 @@ while el < len(num_list) - 1:
 print("Количество цепочек из 3х и более возрастающих чисел = ", sum)
 
 # 5, 7, 3, -5, 7, 8, 11, 3, 9
-
-
-
-
-
-
